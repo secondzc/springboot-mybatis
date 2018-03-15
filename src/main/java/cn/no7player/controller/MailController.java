@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * Created by zhangcy on 2018/3/15
  */
@@ -22,5 +24,14 @@ public class MailController {
     public void send(){
         mailService.sendSimpleMail("2901491651@qq.com","test smpt","this is content");
         System.out.println("send success");
+    }
+
+    /*
+    更改、重置密码
+     */
+    @ResponseBody
+    @RequestMapping("/updatePass")
+    public void updatePass(String key){
+        System.out.println(key);
     }
 }

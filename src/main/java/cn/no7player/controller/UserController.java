@@ -1,7 +1,7 @@
 package cn.no7player.controller;
 
 import cn.no7player.model.User;
-import cn.no7player.service.UserService;
+import cn.no7player.service.impl.UserServiceImpl;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,7 +17,7 @@ public class UserController {
     private Logger logger = Logger.getLogger(UserController.class);
 
     @Autowired
-    private UserService userService;
+    private UserServiceImpl userService;
 
     @RequestMapping("/getUserInfo")
     @ResponseBody

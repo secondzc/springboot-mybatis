@@ -3,7 +3,8 @@
 <mapper namespace="cn.no7player.mapper.UserMapper">
  
   <select id="findUserInfo" resultType="cn.no7player.model.User">
-    select name, age,password from user;
+    select id,name, age,password from user
+    where id=1;
   </select>
  
 </mapper>

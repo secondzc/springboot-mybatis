@@ -1,6 +1,7 @@
 package cn.no7player.controller;
 
 import cn.no7player.service.MailService;
+import cn.no7player.service.PasswordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -18,6 +19,8 @@ public class MailController {
 
     @Autowired
     private MailService mailService;
+    @Autowired
+    private PasswordService passwordService;
 
     @ResponseBody
     @RequestMapping("/send")
@@ -31,7 +34,8 @@ public class MailController {
      */
     @ResponseBody
     @RequestMapping("/updatePass")
-    public void updatePass(String key){
-        System.out.println(key);
+    public void updatePass(){
+        passwordService.test();
     }
+
 }

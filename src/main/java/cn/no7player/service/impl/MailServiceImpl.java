@@ -29,9 +29,7 @@ public class MailServiceImpl implements MailService {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom(from);
         message.setTo(to);
-        //修改地址
-        String updateAdd = "localhost:8080/mail/updatePass?key=hashcode123";
-        message.setSubject(subject+"  "+updateAdd);
+        message.setSubject(subject);
         message.setText(content);
 
         try {

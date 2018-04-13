@@ -33,8 +33,14 @@ public class MailServiceImpl implements MailService {
         message.setText(content);
 
         try {
-            mailSender.send(message);
-            logger.info("简单邮件已经发送。");
+
+            //for(int i=0;i<20;i++){
+                Long before = System.currentTimeMillis();
+                mailSender.send(message);
+                Long after  = System.currentTimeMillis();
+                logger.info("简单邮件已经发送。耗时=  "+(after-before)+"  毫秒");
+            //}
+
         } catch (Exception e) {
             logger.error("发送简单邮件时发生异常！", e);
         }

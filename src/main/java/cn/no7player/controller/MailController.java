@@ -30,7 +30,9 @@ public class MailController {
 
         try {
             mailQueue.put("2901491651@qq.com","test smpt","this is content");
-            mailQueue.put("2901491651@qq.com","test smpt2","this is content2");
+            mailQueue.put("2901491651@qq.com","test smpt2","this is content");
+            mailQueue.put("2901491651@qq.com","test smpt3","this is content");
+            mailQueue.put("2901491651@qq.com","test smpt4","this is content");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
